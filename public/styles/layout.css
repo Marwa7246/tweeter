@@ -14,12 +14,30 @@ html {
  * Global layout stuff
  */
 
+
+
 body {
-  color: #545149;
+  font-family: 'Source Sans Pro', sans-serif;  color: #545149;
+  font-weight: bold;
   background-color: #f4f1ec;
   font-size: 24px;
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  width: 90%;
+  border-style: dashed;
+
+
+ }
