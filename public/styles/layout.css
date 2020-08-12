@@ -36,6 +36,101 @@ body {
 
  main {
   width: 90%;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .article-tweet {
+  display: flex;
+  flex-direction: column;
+  border-style: groove;
+  border-color:  #2a1313;
+  border-width: thick;
+  width: 100%;
+  padding: 0.5em;
+
+ }
+
+  .article-tweet:hover {
+    box-shadow: 10px 10px 5px grey;
+  }
+
+ 
+
+ .article-tweet header {
+  color: #545149;
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 0 1em 0 1em;
 
 
  }
+
+ .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+ }
+
+
+ .article-tweet header img{
+  padding: 0 1em 0 0;
+
+  height: fit-content;
+
+
+ }
+
+
+ .article-tweet footer {
+  color: #545149;
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  padding: 0 1em 0 1em;
+
+ }
+
+ .article-tweet footer .images{
+  color: #545149;
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+ }
+
+ .article-tweet footer .images img{
+   flex: 1;
+  color: #545149;
+  background-color: #f4f1ec;
+  height: 30px;
+  width: 30px;
+  font-size: initial;
+  padding: 0.2em;
+  
+ }
+
+ .article-tweet h3 {
+  
+  width: 100%;
+  padding: 1em;
+  border-bottom-width: thick;
+  border-bottom-color: #2a1313;
+  border-bottom-style: groove;
+  margin:0.5em 0 0.5em 0;
+
+ }
+

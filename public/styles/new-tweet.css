@@ -1,11 +1,10 @@
 .new-tweet {
-  padding: 1.5em;
-  height: 120px;
+  padding: 0.5em;
+  height: 320px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  border-style: dashed;
 
 
  }
@@ -15,7 +14,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-style: dashed;
 
 
 
@@ -29,8 +27,9 @@
 #tweet-text {
   border-style: none;
   margin-bottom: 10px;
-  border-bottom: grey;
+  border-bottom: #2a1313;
   border-bottom-style: groove;
+  border-width: thick;
   width: 100%;
   background-color: inherit;
   padding-top: 10px;

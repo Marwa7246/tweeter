@@ -1,4 +1,4 @@
-header {
+body header {
   height: 400px;
   width: 100%;
   color: #ffffff;
@@ -6,7 +6,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-style: dashed;
   background-color: #e38800;
   background-image: url("../images/black-thread-light.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
