@@ -39,7 +39,7 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 
 
@@ -64,7 +64,7 @@ const createTweetElement = function(object) {
               </footer>
             </article>`);
 
-  $('#tweets-container').append($tweet);                  
+  $('#tweets-container').append($tweet);
 
 };
 
@@ -73,23 +73,21 @@ const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     createTweetElement(tweet);
   }
-}
+};
 
 
-
-
-
- // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+// to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 $(document).ready(function() {
-  $('#form').on('submit', (evt) => {
-    $('#tweets-container').empty();
-      evt.preventDefault();
+  $('#form1').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: $("#form1").serialize(),
+      success: function(response) {
 
-      // debugger
-
-      console.log('hey');
-      renderTweets(data);
-     
-  })
+      }      
+    });
+  });
 });

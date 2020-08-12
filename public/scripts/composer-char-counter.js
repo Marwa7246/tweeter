@@ -1,6 +1,5 @@
 
 const $input = $('#tweet-text');
-let $counter = $('.counter').val();
 
 // COUNT THE NUMBER OF REMAINING CHARACTERS AND MAKE THE COUNTER RED IF IT REACHES 0
 
