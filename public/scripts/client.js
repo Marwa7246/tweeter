@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const tweetData = {
   "user": {
     "name": "Newton",
@@ -75,27 +76,37 @@ const renderTweets = function(tweets) {
   }
 };
 
-
-
-
 // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 $(document).ready(function() {
+
   $('#form1').submit(function(e) {
     e.preventDefault();
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data: $("#form1").serialize(),
-      success: function(response) {
-        function loadTweet(response) {
-          $.ajax({url: '/tweets', method: 'GET'})
-          .then((response) => {
-            renderTweets(response);
-          });
+
+    if ($('#tweet-text').val().length === 0) {
+      alert('The tweet cannot be empty');
+    } else if ($('#tweet-text').val().length  > 140) {
+      alert('The tweet exceeded the limit number of 140 characters');
+    } else {
+
+    
+
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: $("#form1").serialize(),
+        success: function(response) {
+          function loadTweet(response) {
+            $.ajax({url: '/tweets', method: 'GET'})
+              .then((response) => {
+                console.log('hello');
+                renderTweets(response);
+                $('#tweet-text').empty();
+              });
+          }
+          loadTweet(response);
         }
-        loadTweet(response);
-      }      
-    });
+      });
+    }
   });
 });

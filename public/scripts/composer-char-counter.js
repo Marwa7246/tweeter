@@ -15,8 +15,11 @@ function characCount() {
     count.addClass('red');
   }
 
+  return tweetLength;
+
 }
 
 $(document).ready(() => {
   $input.on('keyup', characCount);
 });
+
