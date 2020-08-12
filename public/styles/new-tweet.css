@@ -1,0 +1,38 @@
+.new-tweet {
+  padding: 1.5em;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-style: dashed;
+
+
+ }
+.button {
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-style: dashed;
+
+
+
+}
+.button button {
+  background-color: #4056A1;
+  color: #ffffff;
+  padding: 6px;
+
+}
+#tweet-text {
+  border-style: none;
+  margin-bottom: 10px;
+  border-bottom: grey;
+  border-bottom-style: groove;
+  width: 100%;
+  background-color: inherit;
+  padding-top: 10px;
+  height: 46px;
+}
