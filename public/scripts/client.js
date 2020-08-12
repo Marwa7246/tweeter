@@ -56,6 +56,11 @@ const createTweetElement = function(object) {
               <h3> ${object.content.text}</h3>
               <footer>
                 <p>${object.created_at}</p>
+                <div class="images">
+                  <img src="/images/flag.png">
+                  <img src="/images/arrow.jpg">
+                  <img src="/images/heart.jpg">
+                </div>
               </footer>
 
             </article>`);
