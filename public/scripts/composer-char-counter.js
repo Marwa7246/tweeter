@@ -4,7 +4,7 @@ let $counter = $('.counter').val();
 
 // COUNT THE NUMBER OF REMAINING CHARACTERS AND MAKE THE COUNTER RED IF IT REACHES 0
 
-function characCount () {
+function characCount() {
 
   const tweetLength = $(this).val().length;
   const count = $(this).parent().find('.counter');
