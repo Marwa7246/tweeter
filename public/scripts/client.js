@@ -62,12 +62,9 @@ const createTweetElement = function(object) {
                   <img src="/images/heart.jpg">
                 </div>
               </footer>
-
             </article>`);
 
-  $('#tweets-container').append($tweet);
-  return $tweet;
-                  
+  $('#tweets-container').append($tweet);                  
 
 };
 
@@ -78,11 +75,21 @@ const renderTweets = function(tweets) {
   }
 }
 
-const $tweet = renderTweets(data);
-
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
 
 
-$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
+
+ // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+
+$(document).ready(function() {
+  $('#form').on('submit', (evt) => {
+    $('#tweets-container').empty();
+      evt.preventDefault();
+
+      // debugger
+
+      console.log('hey');
+      renderTweets(data);
+     
+  })
+});
