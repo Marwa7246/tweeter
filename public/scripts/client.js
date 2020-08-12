@@ -65,7 +65,7 @@ const createTweetElement = function(object) {
               </footer>
             </article>`);
 
-  $('#tweets-container').append($tweet);
+  $('#tweets-container').prepend($tweet);
 
 };
 
@@ -89,8 +89,6 @@ $(document).ready(function() {
       alert('The tweet exceeded the limit number of 140 characters');
     } else {
 
-    
-
       $.ajax({
         type: 'POST',
         url: '/tweets',
@@ -101,7 +99,7 @@ $(document).ready(function() {
               .then((response) => {
                 console.log('hello');
                 renderTweets(response);
-                $('#tweet-text').empty();
+                $('#tweet-text').val('');
               });
           }
           loadTweet(response);
