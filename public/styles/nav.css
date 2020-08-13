@@ -18,3 +18,11 @@ nav {
 
  }
 
+ nav button {
+  background-color: #4056A1;
+  border: #4056A1;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+ }
+

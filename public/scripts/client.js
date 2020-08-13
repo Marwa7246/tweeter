@@ -107,10 +107,18 @@ const renderTweets = function(tweets) {
   }
 };
 
+
+function loadTweet() {
+  $.ajax({url: '/tweets', method: 'GET'})
+    .then((response) => {
+      renderTweets(response);
+    });
+}
 // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 $(document).ready(function() {
 
+  loadTweet();
 
   $('#form1').submit(function(e) {
     e.preventDefault();
@@ -132,14 +140,11 @@ $(document).ready(function() {
         url: '/tweets',
         data: $("#form1").serialize(),
         success: function(response) {
-          function loadTweet(response) {
-            $.ajax({url: '/tweets', method: 'GET'})
-              .then((response) => {
-                renderTweets(response);
-                $input.val('');
-              });
-          }
-          loadTweet(response);
+          $input.val('');
+
+          $('#tweets-container').empty();
+
+          loadTweet();
         }
       });
     }
