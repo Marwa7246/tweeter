@@ -5,6 +5,7 @@
  */
 
 
+
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -67,6 +68,11 @@ const data = [
 
 const createTweetElement = function(object) {
 
+  const dateLong = new Date(object.created_at);
+  const dateISO = (dateLong.toISOString());
+
+  const dateDiff = (moment(dateISO).fromNow());
+
   const $tweet = $(`<article class="article-tweet">
               <header>
                 <div class="user">                    
@@ -77,7 +83,7 @@ const createTweetElement = function(object) {
               </header>
               <h3>${escape(object.content.text)}</h3>
               <footer>
-                <p>${object.created_at}</p>
+                <p>${dateDiff}</p>
                 <div class="images">
                 <i class="fas fa-flag"></i>
                 <i class="fas fa-retweet"></i>
@@ -104,6 +110,7 @@ const renderTweets = function(tweets) {
 // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 $(document).ready(function() {
+
 
   $('#form1').submit(function(e) {
     e.preventDefault();

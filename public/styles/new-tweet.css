@@ -11,6 +11,7 @@
 
  .new-tweet > h2 {
   margin-bottom: 14px;
+  margin-top: 15px;
  }
 .button {
   font-family: 'Bungee', sans-serif;
@@ -46,7 +47,7 @@
 
 .error {
   color: red;
-  margin-bottom: 15px;
+  margin: 15px 0 15px 0;
     display: none;
     border-color: red;
     border-width: 5px;
