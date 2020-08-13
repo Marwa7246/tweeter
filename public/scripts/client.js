@@ -5,6 +5,11 @@
  */
 
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 const errorData = {
   "empty": "The tweet cannot be empty. Please enter few words!",
@@ -70,7 +75,7 @@ const createTweetElement = function(object) {
                 </div>
                 <h5> ${object.user.handle}</h5>
               </header>
-              <h3> ${object.content.text}</h3>
+              <h3>${escape(object.content.text)}</h3>
               <footer>
                 <p>${object.created_at}</p>
                 <div class="images">
@@ -80,8 +85,12 @@ const createTweetElement = function(object) {
                 </div>
               </footer>
             </article>`);
+            
+
 
   $('#tweets-container').prepend($tweet);
+ 
+
 
 };
 
@@ -103,19 +112,12 @@ $(document).ready(function() {
     if ($input.val().length === 0) {
 
       createError(errorData, 'empty');
-      //$('.error').addClass('appear');      
-      $('.error').slideDown()
-
-
+      $('.error').slideDown();
 
     } else if ($input.val().length > 140) {
       createError(errorData, 'large');
-      $('.error').slideDown()
-
-
-      //$('.error').addClass('appear');
-
-
+      $('.error').slideDown();
+      
     } else {
 
       $.ajax({
@@ -126,7 +128,6 @@ $(document).ready(function() {
           function loadTweet(response) {
             $.ajax({url: '/tweets', method: 'GET'})
               .then((response) => {
-                console.log('hello');
                 renderTweets(response);
                 $input.val('');
               });
