@@ -4,6 +4,22 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+
+const errorData = {
+  "empty": "The tweet cannot be empty. Please enter few words!",
+  "large": "The tweet exceeded the limit number of 140 characters, try again?"
+};
+
+
+const createError = function(object, key) {
+
+  const $error = $(`<h4 class="error">${object[key]}</h4>`);
+
+  $('.error').replaceWith($error);
+
+};
+
 const tweetData = {
   "user": {
     "name": "Newton",
@@ -82,11 +98,24 @@ $(document).ready(function() {
 
   $('#form1').submit(function(e) {
     e.preventDefault();
+    const $input = $('#form1').find('textarea');
 
-    if ($('#tweet-text').val().length === 0) {
-      alert('The tweet cannot be empty');
-    } else if ($('#tweet-text').val().length  > 140) {
-      alert('The tweet exceeded the limit number of 140 characters');
+    if ($input.val().length === 0) {
+
+      createError(errorData, 'empty');
+      //$('.error').addClass('appear');      
+      $('.error').slideDown()
+
+
+
+    } else if ($input.val().length > 140) {
+      createError(errorData, 'large');
+      $('.error').slideDown()
+
+
+      //$('.error').addClass('appear');
+
+
     } else {
 
       $.ajax({
@@ -99,7 +128,7 @@ $(document).ready(function() {
               .then((response) => {
                 console.log('hello');
                 renderTweets(response);
-                $('#tweet-text').val('');
+                $input.val('');
               });
           }
           loadTweet(response);
@@ -108,3 +137,5 @@ $(document).ready(function() {
     }
   });
 });
+
+

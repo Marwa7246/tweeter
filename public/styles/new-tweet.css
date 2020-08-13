@@ -8,6 +8,10 @@
 
 
  }
+
+ .new-tweet > h2 {
+  margin-bottom: 14px;
+ }
 .button {
   font-family: 'Bungee', sans-serif;
   display: flex;
@@ -38,4 +42,21 @@
 .red {
   color: red;
 
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+    margin-top: 0;
+    display: none;
+    border-color: red;
+    border-width: 5px;
+    border-style: groove;
+    padding: 10px;
+    width: fit-content;
+  
+
+}
+.appear {
+  display: block;
 }

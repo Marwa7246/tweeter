@@ -1,5 +1,4 @@
 
-const $input = $('#tweet-text');
 
 // COUNT THE NUMBER OF REMAINING CHARACTERS AND MAKE THE COUNTER RED IF IT REACHES 0
 
@@ -7,6 +6,9 @@ function characCount() {
 
   const tweetLength = $(this).val().length;
   const count = $(this).parent().find('.counter');
+  $('.error').slideUp()
+  //$('.error').removeClass('appear');
+
   count.removeClass('red');
 
   count.val(140 - tweetLength);
@@ -20,6 +22,6 @@ function characCount() {
 }
 
 $(document).ready(() => {
-  $input.on('keyup', characCount);
+  $('#tweet-text').on('keyup', characCount);
 });
 
