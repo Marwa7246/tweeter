@@ -9,7 +9,7 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 const errorData = {
   "empty": "The tweet cannot be empty. Please enter few words!",
@@ -79,10 +79,10 @@ const createTweetElement = function(object) {
               <footer>
                 <p>${object.created_at}</p>
                 <div class="images">
-                  <img src="/images/flag.png">
-                  <img src="/images/arrow.jpg">
-                  <img src="/images/heart.jpg">
-                </div>
+                <i class="fas fa-flag"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="fas fa-heart"></i>
+                  </div>
               </footer>
             </article>`);
             

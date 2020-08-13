@@ -57,7 +57,18 @@ body {
     box-shadow: 10px 10px 5px grey;
   }
 
+  .fas:hover {
+    text-shadow: 2px 2px  grey;
+    
+
+  }
+
  
+  .fas {
+    padding: 5px;
+    
+
+  }
 
  .article-tweet header {
   color: #545149;
@@ -93,7 +104,6 @@ body {
  .article-tweet footer {
   color: #545149;
   background-color: #f4f1ec;
-  background-image: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -106,7 +116,6 @@ body {
  .article-tweet footer .images{
   color: #545149;
   background-color: #f4f1ec;
-  background-image: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -114,16 +123,7 @@ body {
 
  }
 
- .article-tweet footer .images img{
-   flex: 1;
-  color: #545149;
-  background-color: #f4f1ec;
-  height: 30px;
-  width: 30px;
-  font-size: initial;
-  padding: 0.3em;
-  
- }
+
 
  .article-tweet h3 {
   
