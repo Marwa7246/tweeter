@@ -21,6 +21,8 @@ function characCount() {
 
 }
 
+
+//waiting for the user to end a character in the form
 $(document).ready(() => {
   $('#tweet-text').on('keyup', characCount);
 });
