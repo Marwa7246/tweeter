@@ -195,3 +195,9 @@ main {
 
 }
 
+@media only screen and (min-width: 1024px) {
+body {
+ margin: auto;
+ width: 1024px;
+}
+}
