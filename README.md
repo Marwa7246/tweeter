@@ -4,9 +4,9 @@ Tweeter is a simple, single-page Twitter clone, build using HTML, CSS, JS, jQuer
 
 ## Final Product
 
-!["screenshot of mobile app page"]()
-!["screenshot of tablet app page"]()
-!["screenshot of desktop app page"]()
+!["screenshot of mobile app page"](https://github.com/Marwa7246/tweeter/blob/master/docs/mobileView.png)
+!["screenshot of tablet app page"](https://github.com/Marwa7246/tweeter/blob/master/docs/tabletView.png)
+!["screenshot of desktop app page"](https://github.com/Marwa7246/tweeter/blob/master/docs/desktopView.png)
 
 
 
