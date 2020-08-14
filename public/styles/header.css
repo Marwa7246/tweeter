@@ -1,4 +1,4 @@
-body header {
+body > header {
   height: 400px;
   margin-top: 120px;
   width: 100%;
@@ -9,6 +9,46 @@ body header {
   flex-direction: column;
   background-color: #e38800;
   background-image: url("../images/black-thread-light.png");
+  font-weight: 500;
+}
+
+body > header > span {
+  
+  font-weight: bold;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  body > header {
+
+    width: 35%;
+    height: 25%;
+    margin-top: 240px; 
+    align-items: center;   
+    justify-content: center;
+    padding-top: 1em;
+ 
+
+
+  }
+
+  body > header > div {
+    display: flex;
+      justify-content: center;
+      margin-top: 0px;
+
+  }
+
+  body > header > div > img {
+    width: 80%;  
+  }
+
 
 
 }

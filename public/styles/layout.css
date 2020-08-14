@@ -14,7 +14,11 @@ html {
  * Global layout stuff
  */
 
+* {
+  margin: 0;
+  padding: 0;
 
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;  color: #545149;
@@ -24,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%
 
 
 
@@ -41,15 +46,22 @@ body {
   flex-direction: column;
  }
 
+ #tweets-container {
+  width: -webkit-fill-available;
+
+
+ }
+
  .article-tweet {
   display: flex;
   flex-direction: column;
   border-style: groove;
   border-color:  #2a1313;
   border-width: thick;
-  width: 100%;
   padding: 0.5em;
   margin-bottom: 50px;
+  width: -webkit-fill-available;
+  
 
  }
 
@@ -70,7 +82,7 @@ body {
 
   }
 
- .article-tweet header {
+ .article-tweet > header {
   color: #545149;
   background-color: #f4f1ec;
   background-image: none;
@@ -79,7 +91,7 @@ body {
   justify-content: space-between;
   height: fit-content;
   padding: 0 1em 0 1em;
-  margin-top: 0;
+  align-items: center;
 
 
  }
@@ -92,16 +104,15 @@ body {
  }
 
 
- .article-tweet header img{
-  padding: 0 1em 0 0;
-
+ .user > img {
   height: fit-content;
+  margin-right: 15px;
 
 
  }
 
 
- .article-tweet footer {
+ .article-tweet > footer {
   color: #545149;
   background-color: #f4f1ec;
   display: flex;
@@ -113,7 +124,7 @@ body {
 
  }
 
- .article-tweet footer .images{
+ .article-tweet footer > .images{
   color: #545149;
   background-color: #f4f1ec;
   display: flex;
@@ -125,7 +136,7 @@ body {
 
 
 
- .article-tweet h3 {
+ .article-tweet > h3 {
   
   width: 100%;
   padding: 1em;
@@ -136,4 +147,51 @@ body {
   word-wrap: break-word;
 
  }
+
+
+
+@media only screen and (min-width: 768px) {
+main {
+    width: 50%;
+    margin-top: 240px;
+
+}
+
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 16px;
+
+  }
+
+  .article-tweet > footer {
+    color: #545149;
+    background-color: #f4f1ec;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: smaller;
+  
+   }
+
+  .article-tweet footer > p {
+     font-size: 14px;
+  }
+
+  .user > img {
+    margin: 0;
+  
+  
+   }
+
+
+ .article-tweet > header {
+    padding: 0 ;
+ }
+
+}
 

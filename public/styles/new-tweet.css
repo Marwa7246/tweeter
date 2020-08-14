@@ -1,5 +1,6 @@
 .new-tweet {
   padding: 0.5em;
+  margin-bottom: 1em;
   height: 320px;
   width: 100%;
   display: flex;
@@ -60,3 +61,17 @@
 .appear {
   display: block;
 }
+
+
+@media only screen and (min-width: 768px) {
+  .new-tweet > h2 {
+font-size: 1.5em;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+
+  }
+  
+  }
