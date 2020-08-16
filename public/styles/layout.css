@@ -146,6 +146,7 @@ body {
 
 #scroll:hover {
   text-shadow: 2px 2px  grey;
+  box-shadow: 5px 5px 1px grey;
 }
 
 @media only screen and (min-width: 768px) {
