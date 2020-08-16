@@ -7,18 +7,12 @@ function characCount() {
   const tweetLength = $(this).val().length;
   const count = $(this).parent().find('.counter');
   $('.error').slideUp();
-  //$('.error').removeClass('appear');
-
   count.removeClass('red');
-
   count.val(140 - tweetLength);
-
   if (tweetLength >= 140) {
     count.addClass('red');
   }
-
   return tweetLength;
-
 }
 
 
