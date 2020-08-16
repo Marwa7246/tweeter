@@ -10,10 +10,11 @@ body > header {
   background-color: #e38800;
   background-image: url("../images/black-thread-light.png");
   font-weight: 500;
+  margin-bottom: 10px;
+
 }
 
-body > header > span {
-  
+body > header > span {  
   font-weight: bold;
 }
 
