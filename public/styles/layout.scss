@@ -1,0 +1,205 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;  
+  color: #545149;
+  font-weight: bold;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+ main {
+  width: 90%;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+ }
+
+ #tweets-container {
+  width: -webkit-fill-available;
+ }
+
+ .article-tweet {
+  display: flex;
+  flex-direction: column;
+  border-style: groove;
+  border-color:  #2a1313;
+  border-width: thick;
+  padding: 0.5em;
+  margin-bottom: 50px;
+  width: -webkit-fill-available;
+ }
+
+  .article-tweet:hover {
+    box-shadow: 10px 10px 5px grey;
+  }
+
+  .fas:hover {
+    text-shadow: 2px 2px  grey;
+  }
+
+
+.fas:active {
+  text-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+ 
+  .fas {
+    padding: 5px;
+  }
+
+ .article-tweet > header {
+  color: #545149;
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 0 1em 0 1em;
+  align-items: center;
+ }
+
+ .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+ }
+
+
+ .user > img {
+  height: fit-content;
+  margin-right: 15px;
+ }
+
+
+ .article-tweet > footer {
+  color: #545149;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  padding: 0 1em 0 1em;
+ }
+
+ .article-tweet footer > .images{
+  color: #545149;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+
+ }
+
+
+
+ .article-tweet > h3 {
+  
+  width: 100%;
+  padding: 1em;
+  border-bottom-width: thick;
+  border-bottom-color: #2a1313;
+  border-bottom-style: groove;
+  margin:0.5em 0 0.5em 0;
+  word-wrap: break-word;
+ }
+
+ #scroll {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 1.8em;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 2em;
+  width: 1.3em;
+}
+
+#scroll:hover {
+  text-shadow: 2px 2px  grey;
+  box-shadow: 5px 5px 1px grey;
+}
+
+@media only screen and (min-width: 768px) {
+main {
+    width: 50%;
+    margin-top: 240px;
+}
+
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  .article-tweet > footer {
+    color: #545149;
+    background-color: #f4f1ec;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: smaller;  
+   }
+
+  .article-tweet footer > p {
+     font-size: 14px;
+  }
+
+  .user > img {
+    margin: 0;  
+   }
+
+
+ .article-tweet > header {
+    padding: 0 ;
+ }
+
+}
+
+@media only screen and (min-width: 1024px) {
+body {
+ margin: auto;
+ width: 1024px;
+}
+}
