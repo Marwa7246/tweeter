@@ -34,6 +34,6 @@ app.post('/tweets', (req, res) => {
 });
 
 
-http.listen(process.env.PORT || PORT, function(){
-  console.log('listening on', http.address().port);
+app.listen(process.env.PORT || PORT, () => {
+  console.log("Example app listening on port " + PORT);
 });
