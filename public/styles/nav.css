@@ -25,14 +25,20 @@ nav {
   font-size: 0.9em;
   font-weight: bold;
   cursor: pointer;
+  outline: none;
+
 
  }
  nav > button > i {
   
   color:red;
-  
-
+  position: relative;
+  animation: composeFa 2s linear infinite alternate;
  }
 
 
-
+ @keyframes composeFa {
+  0%   {top:0px; left:0px;}
+  50%  {top:15px; left:0px;}
+  100% {top:0px; left:0px;}
+}
